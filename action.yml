@@ -1,0 +1,18 @@
+name: "action-test"
+description: "Primjer reusable actions-a"
+inputs:
+  greeting:
+    description: "Pozdrav koji action ispisuje"
+    required: false
+    default: "Zdravo"
+outputs:
+  message:
+    description: "Krajnja poruka"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Ispiši pozdrav
+      run: |
+        echo "${{ inputs.greeting }}, ovo je ehrnjic/action-test!"
+        echo "message=${{ inputs.greeting }} from action-test" >> $GITHUB_OUTPUT

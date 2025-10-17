@@ -26,10 +26,30 @@ Primjer:
 1.1.1 – ispravljen bug
 2.0.0 – promjena koja ruši kompatibilnost s verzijom 1.x`
 ```
-Više o semantickom modelu verzioniranja nauči [SemVer.org](https://semver.org/)
+Više o semantičkom modelu verzioniranja nauči na [SemVer.org](https://semver.org/)
 
 
 ➡️ Floating taging je obavezan za svaku izmjenu i omogućava da se referencira latest MAJOR izmjenu, npr. floating tag `v2` referencira na tag `v2.7.23` sto je latest izmjena verzije gdje je MAJOR=2. Time se olakšava odabir ispravne verzije `uses:` direktivom iz workflowa.
+
+Više o git taggingu nauči na [Git Basic - Tagging](https://git-scm.com/book/ms/v2/Git-Basics-Tagging)
+
+➡️ Kreirati i updateovati fajl CHANGELOG.md koji se koristi za praćenje svih značajnih promjena u repozitoriju kroz njegove verzije. Cilj je omogućiti korisnicima i saradnicima da jasno vide šta se promijenilo, kada i zašto, bez potrebe da prolaze kroz Git historiju.
+
+Primjer CHANGELOG.md:
+
+```
+## [1.1.0] - 2025-10-17
+### Added
+- Dodan novi API endpoint za autentifikaciju.
+
+### Fixed
+- Ispravljena greška pri validaciji JWT tokena.
+
+## [1.0.0] - 2025-09-01
+### Added
+- Inicijalno izdanje.
+```
+Više o CHANGELOG nauci na: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ## Kreiranje novog GitHub Actions-a
 
@@ -140,5 +160,3 @@ git push -f origin v1
     ✅ v1.0.1 → nova verzija
     ✅ v1 → floating tag koji referencira commit id od v1.0.1
 ```
-
- 6️⃣ 7️⃣ 8️⃣ ➡️ ✅

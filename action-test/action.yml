@@ -13,6 +13,7 @@ runs:
   using: "composite"
   steps:
     - name: Ispiši pozdrav
+      shell: bash
       run: |
         echo "${{ inputs.greeting }}, ovo je ehrnjic/action-test!"
         echo "message=${{ inputs.greeting }} from action-test" >> $GITHUB_OUTPUT
